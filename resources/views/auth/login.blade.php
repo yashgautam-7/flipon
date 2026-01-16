@@ -1,3 +1,8 @@
+@extends('user.layout')
+@php($step = 0)
+@section('title','Login')
+@section('content')
+
 <form action="{{route('userlogin')}}"  method="POST">
     @csrf
     <h3>User Info</h3>

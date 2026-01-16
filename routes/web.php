@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AddressController;
 
-Route::redirect('/','register');
+Route::redirect('/','login');
 
 Route::middleware('auth')->group(function(){
     Route::get('dashboard',fn () => view('welcome'));

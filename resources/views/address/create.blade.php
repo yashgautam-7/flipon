@@ -4,26 +4,63 @@
 @section('title','Address')
 @section('content')
 
-<h4>Address</h4>
+<div class="brand">
+    <b>To Get Your Order Same Day</b><span class="text-primary"> <b>Mention Delivery Address </b></span>
+</div>
+
 
 <form method="POST" action="{{route('storeaddress')}}"  >
     @csrf
-        <label> Enter Address </label> 
-            <input class="form-control mb-2" type="text" name="address" placholder="User Address"></input> </br>
-            <label>Country </label> 
-            <input  class="form-control mb-2" type="text" name="country" placholder="Enter Country"></input> </br>
-            <label> State</label> 
-            <input class="form-control mb-2" type="text" name="state" placholder="Enter State"></input> </br>
-            <label> City</label> 
-            <input class="form-control mb-2" type="text" name="city" placholder="Enter City"></input> </br>
-            <label> Pincode</label> 
-            <input class="form-control mb-2" type="text" name="pincode" placholder="Enter Pincode"></input> </br>
-            
-            <button type="submit"> Save Address</button>
+            <div class="mb-2">
+                <label class="form-label"><b> Enter Address</b></label>
+                <input class="form-control" type="text" name="address" placholder="User Address"></input> </br>
+            </div>
+            <div class="mb-2">
+                <label class="form-label"><b>Country</b> </label> 
+                <input  class="form-control" type="text" name="country" placholder="Enter Country"></input> </br>
+            </div>
+            <div class="mb-2">
+                <label class="form-label"> <b>State</b></label> 
+                <input class="form-control" type="text" name="state" placholder="Enter State"></input> </br>
+            </div>
+             <div class="mb-2">
+                <label class="form-label" > <b>City</b></label> 
+                <input class="form-control " type="text" name="city" placholder="Enter City"></input> </br>
+            </div>
+
+              <div class="mb-2">
+                <label class="form-label"> <b>Pincode</b></label> 
+                <input class="form-control " type="text" name="pincode" placholder="Enter Pincode"></input> </br>
+            </div>
+            <button type="submit" class="btn btn-amazon w-100 mb-3"> Save Address</button>
 </form>
 @endsection
 
 @section('side')
-<h5>Why we need this?</h5>
-<p>This address will be used for billing and delivery.</p>
+<h4 class="mb-4">
+   Your Details 100% Secure With Us.
+</h4>
+
+
+<div class="info-item">
+    <div class="info-icon">🧾</div>
+    <div>
+        <strong> Why we need this?</strong>
+        <p class="mb-0 small">
+           This address will be used for billing and delivery.
+        </p>
+    </div>
+</div>
+
+<div class="info-item">
+    <div class="info-icon">🚚</div>
+    <div>
+        <strong>Free Delivery on first order</strong>
+        <p class="mb-0 small">
+            Get free delivery on your first purchase.
+        </p>
+    </div>
+</div>
+
+
 @endsection
